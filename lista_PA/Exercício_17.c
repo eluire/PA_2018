@@ -46,7 +46,7 @@ int main() {
     cmc_t = clock();
     BubbleSort(arr1, n-1);
     fim_t = clock();
-    printf("bubble_sort levou: %fseg\n", (double)(fim_t - cmc_t / CLOCKS_PER_SEC));
+    printf("tempo BubbleSort: %fseg\n", (double)(fim_t - cmc_t / CLOCKS_PER_SEC));
     free(arr2);
     // Libera o array 1
     free(arr1);
@@ -54,7 +54,7 @@ int main() {
     cmc_t = clock();
     qsort(arr2, n, sizeof(int), compare);
     fim_t = clock();
-    printf("Qsort levou: %fseg\n", (double)(fim_t - cmc_t) / CLOCKS_PER_SEC);
+    printf("Tempo Qsort: %fseg\n", (double)(fim_t - cmc_t) / CLOCKS_PER_SEC);
     free(arr2);
 
     void (*ponteiro_qsort)(void *arr, size_t n, size_t size, int(*compar)(const void *, const void *));
@@ -63,8 +63,9 @@ int main() {
     cmc_t = clock();
     ponteiro_qsort(arr3, n, sizeof(int), compare);
     fim_t = clock();
-    printf("Qsort pelo ponteiro levou: %fseg\n", (double)(fim_t - cmc_t) / CLOCKS_PER_SEC);
+    printf("tempo Qsort por ponteiro: %fseg\n", (double)(fim_t - cmc_t) / CLOCKS_PER_SEC);
     free(arr3);
+
 
     return 0;
 }
