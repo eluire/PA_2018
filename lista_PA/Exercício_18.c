@@ -70,4 +70,7 @@ int main()
 	printar(arr3,n);
 
 	return 0;
+	free(arr1);
+	free(arr2);
+	free(arr3);
 }
