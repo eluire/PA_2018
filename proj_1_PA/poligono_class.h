@@ -4,7 +4,7 @@
 #include "point_class.cpp"
 #include <iostream>
 
-class Poligono{
+class Poligono: public Point{
 
 private:
 
@@ -24,7 +24,7 @@ public:
 	void translada(float a, float b);
 	unsigned Area();
 	void printpol();
-	void rotation(Poligono Pol,float ang);
+	void rotation(Point P1,float ang);
 };
 
 

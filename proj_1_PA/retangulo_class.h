@@ -3,7 +3,6 @@
 #include <iostream>
 #include "poligono_class.cpp"
 
-
 class Retangulo: public Poligono{
 
 private:
@@ -17,3 +16,4 @@ public:
   Retangulo(float mx,float my, float _altura,float _largura);
 
 };
+#endif
