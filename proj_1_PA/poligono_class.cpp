@@ -20,7 +20,7 @@ void Poligono::limpar(){
 // metodos
 void Poligono::setV(float mx, float my){
 	// colocar um novo verticie
-	arr[N+1].setXY(mx,my);
+	arr[N].setXY(mx,my);
 	N++;
 
 }
