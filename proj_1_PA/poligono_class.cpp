@@ -1,54 +1,63 @@
-#include <poligono_class.h>
 #include <iostream>
+#include <poligono_class.h>
 #include <cmath>
+#define PI 3.1415
+using namespace std;
+// funçoes Base
+void Poligono::copiar(Poligono Pol){
 
-using namespace std 
-
-
-void poligono::criar(unsigned _N){
-
-	if(_N == 0){
-		N = 0;
-		p = NULL;
-		return;
-	}
-	N = _N;
-	p = new point[N];
+	for (int i=0; i<NMAX; i++){
+			arr[i].setX() = Pol[i].getX();
+			arr[i].setY() = Pol[i].getY();
+		}
 }
-void poligono::copiar(poligono &Pol){
+void Poligono::limpar(){
 
-	criar(Pol.N);
-	for (int i=0; i<Pol.N; i++){
-
-		p[i] = Pol.p[i]; 
+	for(int i=0;i<N;i++){
+		arr[i].setXY(0,0);
 	}
 }
-void poligono::limpar(){
+// metodos
+void Poligono::setV(float mx, float my){
+	// colocar um novo verticie
+	arr[N+1].setXY(mx,my);
+	N++;
 
-	if(p != NULL){
-		delete []p;
-	}
-	N = 0;
-	p = NULL;
 }
-void poligono::setV(const point &P1){
- 	
- 	point *aux;
- 	aux = new point [N+1];
- 	for (int i=0; i<N; i++){
-
-		aux[i] = p[i]; 
+void Poligono::translada(float a, float b){
+	for(i=0;i<N;i++){
+		//translada
+		arr[i].setXY(getX()+a,getY()+b);
 	}
-	aux[N] = P1;
-	delete []p;
-	p = aux;
 }
-unsigned poligono::Area(){
+unsigned Poligono::Area(){
+	//Area do Poligono
 	for(i=0;i<N;i++){
 
-		soma += p[i].x + p[i+1].y - p[i+1] - p[i];
+		soma += p[i].getX() + p[i+1].getY() - p[i+1].getX() - p[i].getY();
 	}
 	return soma/2;
 	}
-
-
+void Poligono::rotation(Point P1 float ang){
+		//transformando de graus para rad
+		float x = ((ang/180)*PI);
+		//translada o poligono para o ponto informado
+			for (i = 0; i < N; i++) {
+					arr[i].translada(P1.getX(),P1.getY());
+			}
+			// rotaciona o poligono
+			for (i = 0; i < N; i++) {
+					arr[i].setX(arr[i].getX()*cos(ang)-arr[i].getY()*sin(ang));
+					arr[i].setY(arr[i].getX()*sin(ang)+arr[i].getY()*cos(ang));
+			}
+			//volta para o centro
+			for (i = 0; i < N; i++) {
+					arr[i].translada((-1*(P1.getX())),(-1*(P1.getY())));
+			}
+}
+void Poligono::printpol() {
+		// printa o poligono
+		for(i=0;i<N;i++){
+			cout<<" ( "<<arr[i].getX()<<" -> "<<arr[i].getY()<<" ) ";
+		}
+}

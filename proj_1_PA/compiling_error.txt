@@ -1,0 +1,4 @@
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/poligono_class.cpp:1:10: fatal error: Poligono_class.h: Arquivo ou diretório inexistente
+ #include <Poligono_class.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.

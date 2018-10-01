@@ -4,44 +4,44 @@
 
 using namespace std;
 
-// metodos 
-void point::setX(float mx){
+// metodos
+void Point::setX(float mx){
 	x = mx;
 }
-void point::setY(float my){
+void Point::setY(float my){
 	y = my;
 }
-void point::setXY(float mx,float my){
+void Point::setXY(float mx,float my){
 	x = mx;
 	y = my;
 }
-point point::add(point P1){
-	point add;
+Point Point::add(Point P1){
+	Point add;
 	add.x = P1.x + x;
 	add.y = P1.y + y;
 	return add;
 }
-point point::sub(point P1){
-	point sub;
+Point Point::sub(Point P1){
+	Point sub;
 	sub.x = P1.x - x;
-	sub.y = P1.y - y; 
+	sub.y = P1.y - y;
 	return sub;
 }
-float point::norma(){
+float Point::norma(){
 	return sqrt((x*x)+(y*y));
 }
-point point::translada(float a, float b){
-	point trans;
+Point Point::translada(float a, float b){
+	Point trans;
 	trans.x = x+a;
 	trans.y = y+b;
 	return trans;
 }
-void point::imprime(){
+void Point::imprime(){
 
 	cout<<"( "<<x<<"x , "<<y<<"y )"<<endl;
 }
 // sobrecaga do operador <<
-ostream &operator<<(ostream &X, const point &H){
+ostream &operator<<(ostream &X, const Point &H){
 
 		X<<"("<<H.x<<", "<<H.y<<")"<<endl;
 		return X;
