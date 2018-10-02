@@ -63,3 +63,14 @@ void Poligono::printpol() {
 			cout<<" ( "<<arr[i].getX()<<" -> "<<arr[i].getY()<<" ) ";
 		}
 }
+Point Poligono::cmass(){
+		Point P1;
+		float somax =0;
+		float somay =0;
+		for(int i=0;i<N;i++){
+			somax += arr[i].getX();
+			somax += arr[i].getY();
+		}
+		P1.setXY(somax/N,somay/N);
+		return P1;
+}

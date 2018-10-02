@@ -6,15 +6,13 @@ using namespace	std;
 int main()
 {
 
-	Point p1;
-	Poligono pol;
-	p1.setXY(2,3);
-	cout<<"p1"<<p1<<endl;
-	pol.setV(1,2);
-	pol.printpol();
-	Retangulo ret(1,1,1,1);
-	cout<<""<<endl;
+	Retangulo ret(0,0,3,4);
 	ret.printpol();
+	cout<<"Área do retangulo 1:"<<ret.Area()<<endl;
+	ret.translada(-3,4);
+	cout<<"Área do retangulo 2:"<<ret.Area()<<endl;
+	ret.rotation(ret.cmass(),30);
+	cout<<"Área do retangulo 3:"<<ret.Area()<<endl;
 
 
 

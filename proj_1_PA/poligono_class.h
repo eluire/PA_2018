@@ -25,6 +25,7 @@ public:
 	unsigned Area();
 	void printpol();
 	void rotation(Point P1,float ang);
+	Point cmass();
 };
 
 
