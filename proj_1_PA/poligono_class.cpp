@@ -8,7 +8,7 @@ using namespace std;
 void Poligono::copiar(Poligono Pol){
 
 	for (int i=0; i<NMAX; i++){
-		 arr[i].setXY(Pol.getX(),Pol.getY());
+		 arr[i].setXY(Pol.arr[i].getX(),Pol.arr[i].getY());
 		}
 }
 void Poligono::limpar(){
@@ -27,7 +27,7 @@ void Poligono::setV(float mx, float my){
 void Poligono::translada(float a, float b){
 	for(int i=0;i<N;i++){
 		//translada
-		arr[i].setXY(getX()+a,getY()+b);
+		arr[i].setXY(arr[i].getX()+a,arr[i].getY()+b);
 	}
 }
 unsigned Poligono::Area(){

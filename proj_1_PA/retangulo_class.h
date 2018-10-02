@@ -1,19 +1,19 @@
 #ifndef RETANGULO_H
 #define RETANGULO_H
 #include <iostream>
-#include "poligono_class.cpp"
+#include "poligono_class.h"
+
 
 class Retangulo: public Poligono{
 
 private:
 
-  Poligono Pol;
   float altura;
   float largura;
 
 public:
   //construtor
-  Retangulo(float mx,float my, float _altura,float _largura);
+  Retangulo(float mx=0,float my=0, float _altura=0,float _largura=0);
 
 };
 #endif

@@ -1,10 +1,10 @@
 #ifndef POLIGONO_H
 #define POLIGONO_H
 #define NMAX 100
-#include "point_class.cpp"
+#include "point_class.h"
 #include <iostream>
 
-class Poligono: public Point{
+class Poligono{
 
 private:
 

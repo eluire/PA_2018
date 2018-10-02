@@ -3,8 +3,8 @@
 using namespace std;
 
 Retangulo::Retangulo(float mx,float my, float _altura,float _largura){
-  Pol.setV(mx,my);
-  Pol.setV(mx,my+altura);
-  Pol.setV(mx+largura,my+altura);
-  Pol.setV(mx+largura,my);
+  this->setV(mx,my);
+  this->setV(mx,my+altura);
+  this->setV(mx+largura,my+altura);
+  this->setV(mx+largura,my);
 }

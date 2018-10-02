@@ -1,6 +1,5 @@
 #include <iostream>
-#include "point_class.h"
-#include "poligono_class.h"
+#include "retangulo_class.h"
 
 using namespace	std;
 
@@ -13,6 +12,9 @@ int main()
 	cout<<"p1"<<p1<<endl;
 	pol.setV(1,2);
 	pol.printpol();
+	Retangulo ret(1,1,1,1);
+	cout<<""<<endl;
+	ret.printpol();
 
 
 

@@ -1,0 +1,8 @@
+/tmp/cckb37wM.o: Na função "main":
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:14: referência não definida para "Poligono::setV(float, float)"
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:15: referência não definida para "Poligono::printpol()"
+/tmp/cckb37wM.o: Na função "Poligono::Poligono()":
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/poligono_class.h:18: referência não definida para "Poligono::limpar()"
+/tmp/cckb37wM.o: Na função "Poligono::~Poligono()":
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/poligono_class.h:20: referência não definida para "Poligono::limpar()"
+collect2: error: ld returned 1 exit status
