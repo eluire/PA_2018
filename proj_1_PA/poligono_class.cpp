@@ -47,21 +47,10 @@ double Poligono::Area(){
 	return abs(area / 2.0);
 }
 void Poligono::rotation(Point P1,float ang){
-		//transformando de graus para rad
-		float x = ((ang/180)*PI);
-		//translada o poligono para o ponto informado
-			for (int i = 0; i < N; i++) {
-					arr[i].translada(P1.getX(),P1.getY());
-			}
-			// rotaciona o poligono
-			for (int i = 0; i < N; i++) {
-					arr[i].setX(arr[i].getX()*cos(ang)-arr[i].getY()*sin(ang));
-					arr[i].setY(arr[i].getX()*sin(ang)+arr[i].getY()*cos(ang));
-			}
-			//volta para o centro
-			for (int i = 0; i < N; i++) {
-					arr[i].translada((-1*(P1.getX())),(-1*(P1.getY())));
-			}
+	for(int i=0;i<N;i++){
+	arr[i].setX(P1.getX() + (arr[i].getX() - P1.getX())*cos(-ang * (PI/180.0)) + (arr[i].getY() - P1.getY())*sin(-ang * (PI/180.0)));
+	arr[i].setY(P1.getY() + (arr[i].getY() - P1.getY())*cos(-ang * (PI/180.0)) - (arr[i].getX() - P1.getX())*sin(-ang * (PI/180.0)));
+	}
 }
 void Poligono::printpol() {
 		// printa o poligono
