@@ -9,7 +9,7 @@ class Poligono{
 private:
 
 	Point arr[NMAX];
-	unsigned  N;
+	unsigned int N;
 	void copiar(Poligono Pol);
 	void limpar();
 
@@ -22,7 +22,7 @@ public:
 	void setV(float x,float y);
 	inline unsigned getN(){return N;}
 	void translada(float a, float b);
-	unsigned Area();
+	double Area();
 	void printpol();
 	void rotation(Point P1,float ang);
 	Point cmass();

@@ -30,16 +30,22 @@ void Poligono::translada(float a, float b){
 		arr[i].setXY(arr[i].getX()+a,arr[i].getY()+b);
 	}
 }
-unsigned Poligono::Area(){
+double Poligono::Area(){
 
-	//Area do Poligono
-	unsigned soma =0;
-	for(int i=0;i<N;i++){
+	// Initialze area
+	double area = 0.0;
 
-	soma += arr[i].getX() + arr[i+1].getY() - arr[i+1].getX() - arr[i].getY();
+	// Calculate value of shoelace formula
+	int j = N - 1;
+	for (int i = 0; i < N; i++)
+	{
+			area += (arr[j].getX() + arr[i].getX()) * (arr[j].getY() - arr[i].getY());
+			j = i;  // j is previous vertex to i
 	}
-	return soma/2;
-	}
+
+	// Return absolute value
+	return abs(area / 2.0);
+}
 void Poligono::rotation(Point P1,float ang){
 		//transformando de graus para rad
 		float x = ((ang/180)*PI);
@@ -60,8 +66,9 @@ void Poligono::rotation(Point P1,float ang){
 void Poligono::printpol() {
 		// printa o poligono
 		for(int i=0;i<N;i++){
-			cout<<" ( "<<arr[i].getX()<<" -> "<<arr[i].getY()<<" ) ";
+			cout<<"( "<<arr[i].getX()<<","<<arr[i].getY()<<" ) -> ";
 		}
+		cout<<"( "<<arr[0].getX()<<","<<arr[0].getY()<<" )"<<endl;
 }
 Point Poligono::cmass(){
 		Point P1;
