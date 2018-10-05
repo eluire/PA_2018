@@ -10,9 +10,12 @@ int main()
 	ret.printpol();
 	cout<<"Área do retangulo 1:"<<ret.Area()<<endl;
 	ret.translada(-3,4);
-	cout<<"Área do retangulo 2:"<<ret.Area()<<endl;
-	ret.rotation(ret.cmass(),30);
-	cout<<"Área do retangulo 3:"<<ret.Area()<<endl;
+	ret.printpol();
+	cout<<endl<<"Área do retangulo 2:"<<ret.Area()<<endl;
+	Point Pj(-1,5.5);
+	ret.rotation(Pj,30);
+	cout<<endl<<"Área do retangulo 3:"<<ret.Area()<<endl;
+	ret.printpol();
 
 
 

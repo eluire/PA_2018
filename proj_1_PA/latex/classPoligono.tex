@@ -1,0 +1,114 @@
+\hypertarget{classPoligono}{}\section{Poligono Class Reference}
+\label{classPoligono}\index{Poligono@{Poligono}}
+
+
+Inheritance diagram for Poligono\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classPoligono__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPoligono_a9311a9a1496878c09c8508b3636e2870}{Poligono} ()
+\begin{DoxyCompactList}\small\item\em contrutores inline \end{DoxyCompactList}\item 
+\hyperlink{classPoligono_a7d2e73767b8dc1bce595f0f286d0e85a}{Poligono} (const \hyperlink{classPoligono}{Poligono} \&Pol)
+\item 
+\hyperlink{classPoligono_a4dd7136ee506cb4355cbdc724c55a4a0}{$\sim$\+Poligono} ()
+\item 
+void \hyperlink{classPoligono_a15dd684ea903a4eb5ba8671d57facb82}{setV} (float x, float y)
+\begin{DoxyCompactList}\small\item\em metodos \end{DoxyCompactList}\item 
+unsigned \hyperlink{classPoligono_abb6eef3e304cb28501356fd5512b0890}{getN} ()
+\item 
+void \hyperlink{classPoligono_adbf605dfd0419b7301c9be0ec1dbe41b}{translada} (float a, float b)
+\item 
+double \hyperlink{classPoligono_a76e434d95055f6c94fdcf3c314d44be0}{Area} ()
+\item 
+void \hyperlink{classPoligono_a8c696d750b78769e9b2e04790dac9195}{printpol} ()
+\item 
+void \hyperlink{classPoligono_a8891a75b7f11bd764a99f296145e26dd}{rotation} (\hyperlink{classPoint}{Point} P1, float ang)
+\item 
+\hyperlink{classPoint}{Point} \hyperlink{classPoligono_a9f5148c45bc074be28664efc717e5968}{cmass} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPoligono_a9311a9a1496878c09c8508b3636e2870}\label{classPoligono_a9311a9a1496878c09c8508b3636e2870}} 
+\index{Poligono@{Poligono}!Poligono@{Poligono}}
+\index{Poligono@{Poligono}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{Poligono()}{Poligono()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Poligono\+::\+Poligono (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+contrutores inline 
+
+construtor por default\+: inicia o poligono sem nenhum ponto cadastrado \mbox{\Hypertarget{classPoligono_a7d2e73767b8dc1bce595f0f286d0e85a}\label{classPoligono_a7d2e73767b8dc1bce595f0f286d0e85a}} 
+\index{Poligono@{Poligono}!Poligono@{Poligono}}
+\index{Poligono@{Poligono}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{Poligono()}{Poligono()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Poligono\+::\+Poligono (\begin{DoxyParamCaption}\item[{const \hyperlink{classPoligono}{Poligono} \&}]{Pol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+construtor por parâmetro\+: inicia o poligono com os pontos que estam no poligono que foi passado como parâmetro \mbox{\Hypertarget{classPoligono_a4dd7136ee506cb4355cbdc724c55a4a0}\label{classPoligono_a4dd7136ee506cb4355cbdc724c55a4a0}} 
+\index{Poligono@{Poligono}!````~Poligono@{$\sim$\+Poligono}}
+\index{````~Poligono@{$\sim$\+Poligono}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{$\sim$\+Poligono()}{~Poligono()}}
+{\footnotesize\ttfamily Poligono\+::$\sim$\+Poligono (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+destrutor\+: zera todos os verticies do poligono 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPoligono_a76e434d95055f6c94fdcf3c314d44be0}\label{classPoligono_a76e434d95055f6c94fdcf3c314d44be0}} 
+\index{Poligono@{Poligono}!Area@{Area}}
+\index{Area@{Area}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{Area()}{Area()}}
+{\footnotesize\ttfamily double Poligono\+::\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+metodo responsável por calcular a Área do poligono metodo não recebe nada como parâmetro mas retorna o valor da área do tipo double \mbox{\Hypertarget{classPoligono_a9f5148c45bc074be28664efc717e5968}\label{classPoligono_a9f5148c45bc074be28664efc717e5968}} 
+\index{Poligono@{Poligono}!cmass@{cmass}}
+\index{cmass@{cmass}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{cmass()}{cmass()}}
+{\footnotesize\ttfamily \hyperlink{classPoint}{Point} Poligono\+::cmass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+metodo responsável por calcular o centro de massa do poligono não recebe nenhum argumento mas retorna o ponto do centro de massa \mbox{\Hypertarget{classPoligono_abb6eef3e304cb28501356fd5512b0890}\label{classPoligono_abb6eef3e304cb28501356fd5512b0890}} 
+\index{Poligono@{Poligono}!getN@{getN}}
+\index{getN@{getN}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{get\+N()}{getN()}}
+{\footnotesize\ttfamily unsigned Poligono\+::getN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+metodo responsável por retornar o número de verticies do poligono nao recebe argumentos mas retorna o numero de verticies do tipo unsigned int \mbox{\Hypertarget{classPoligono_a8c696d750b78769e9b2e04790dac9195}\label{classPoligono_a8c696d750b78769e9b2e04790dac9195}} 
+\index{Poligono@{Poligono}!printpol@{printpol}}
+\index{printpol@{printpol}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{printpol()}{printpol()}}
+{\footnotesize\ttfamily void Poligono\+::printpol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+metodo responsável por imprimir o poligono \mbox{\Hypertarget{classPoligono_a8891a75b7f11bd764a99f296145e26dd}\label{classPoligono_a8891a75b7f11bd764a99f296145e26dd}} 
+\index{Poligono@{Poligono}!rotation@{rotation}}
+\index{rotation@{rotation}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily void Poligono\+::rotation (\begin{DoxyParamCaption}\item[{\hyperlink{classPoint}{Point}}]{P1,  }\item[{float}]{ang }\end{DoxyParamCaption})}
+
+metodo responsável por rotacionar o poligono com base no ponto que for passado como parâmetro metodo recebe como parâmetro o ponto que será a base para a rotação e o ângulo o qual o poligono será rotacionado \mbox{\Hypertarget{classPoligono_a15dd684ea903a4eb5ba8671d57facb82}\label{classPoligono_a15dd684ea903a4eb5ba8671d57facb82}} 
+\index{Poligono@{Poligono}!setV@{setV}}
+\index{setV@{setV}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{set\+V()}{setV()}}
+{\footnotesize\ttfamily void Poligono\+::setV (\begin{DoxyParamCaption}\item[{float}]{mx,  }\item[{float}]{my }\end{DoxyParamCaption})}
+
+
+
+metodos 
+
+metodo responsável por cadastrar um novo verticie ao polinômio. metodo recebe como parâmetro as cordenadas x e y do novo verticie. \mbox{\Hypertarget{classPoligono_adbf605dfd0419b7301c9be0ec1dbe41b}\label{classPoligono_adbf605dfd0419b7301c9be0ec1dbe41b}} 
+\index{Poligono@{Poligono}!translada@{translada}}
+\index{translada@{translada}!Poligono@{Poligono}}
+\subsubsection{\texorpdfstring{translada()}{translada()}}
+{\footnotesize\ttfamily void Poligono\+::translada (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+metodo responsável por transladar o poligono para um determinada posição definida pelo usuário metodo recebe como parâmetro as distancias a e b, as mesmas serão somadas a todos os pontos do poligono da seguinte forma\+: condenada x+a e cordenada y+b. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+poligono\+\_\+class.\+h\item 
+poligono\+\_\+class.\+cpp\end{DoxyCompactItemize}

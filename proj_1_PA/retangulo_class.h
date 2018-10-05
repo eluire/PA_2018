@@ -13,6 +13,10 @@ private:
 
 public:
   //construtor
+  /**
+  @brief contrutor da classe retangulo
+  @param recebe um valor de x e de y juntamente com a altura e a largura do retangulo desejado
+  */
   Retangulo(float mx=0,float my=0, float _altura=0,float _largura=0);
 
 };

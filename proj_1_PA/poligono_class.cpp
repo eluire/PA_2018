@@ -4,20 +4,20 @@
 #define PI 3.1415
 using namespace std;
 
-// funçoes Base
+
 void Poligono::copiar(Poligono Pol){
 
 	for (int i=0; i<NMAX; i++){
 		 arr[i].setXY(Pol.arr[i].getX(),Pol.arr[i].getY());
 		}
 }
+
 void Poligono::limpar(){
 
 	for(int i=0;i<N;i++){
 		arr[i].setXY(0,0);
 	}
 }
-// metodos
 void Poligono::setV(float mx, float my){
 	// colocar um novo verticie
 	arr[N].setXY(mx,my);
@@ -46,12 +46,19 @@ double Poligono::Area(){
 	// Return absolute value
 	return abs(area / 2.0);
 }
+/**
+*metodo responsável por rotacionar o poligono com base no ponto que for passado como parâmetro
+*metodo recebe como parâmetro o ponto que será a base para a rotação e o ângulo o qual o poligono será rotacionado
+*/
 void Poligono::rotation(Point P1,float ang){
 	for(int i=0;i<N;i++){
 	arr[i].setX(P1.getX() + (arr[i].getX() - P1.getX())*cos(-ang * (PI/180.0)) + (arr[i].getY() - P1.getY())*sin(-ang * (PI/180.0)));
 	arr[i].setY(P1.getY() + (arr[i].getY() - P1.getY())*cos(-ang * (PI/180.0)) - (arr[i].getX() - P1.getX())*sin(-ang * (PI/180.0)));
 	}
 }
+/**
+*metodo responsável por imprimir o poligono
+*/
 void Poligono::printpol() {
 		// printa o poligono
 		for(int i=0;i<N;i++){
@@ -68,5 +75,6 @@ Point Poligono::cmass(){
 			somax += arr[i].getY();
 		}
 		P1.setXY(somax/N,somay/N);
+		cout<<P1.getX()<<","<<P1.getY()<<endl;
 		return P1;
 }

@@ -1,8 +1,15 @@
-/tmp/cckb37wM.o: Na função "main":
-/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:14: referência não definida para "Poligono::setV(float, float)"
-/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:15: referência não definida para "Poligono::printpol()"
-/tmp/cckb37wM.o: Na função "Poligono::Poligono()":
-/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/poligono_class.h:18: referência não definida para "Poligono::limpar()"
-/tmp/cckb37wM.o: Na função "Poligono::~Poligono()":
-/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/poligono_class.h:20: referência não definida para "Poligono::limpar()"
+/tmp/ccxArWme.o: Na função "main":
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:9: referência não definida para "Retangulo::Retangulo(float, float, float, float)"
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:10: referência não definida para "Poligono::printpol()"
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:11: referência não definida para "Poligono::Area()"
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:12: referência não definida para "Poligono::translada(float, float)"
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:13: referência não definida para "Poligono::printpol()"
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:14: referência não definida para "Poligono::Area()"
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:16: referência não definida para "Poligono::rotation(Point, float)"
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:17: referência não definida para "Poligono::Area()"
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/main.cpp:18: referência não definida para "Poligono::printpol()"
+/tmp/ccxArWme.o: Na função "Point::Point(Point const&)":
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/point_class.h:15: referência não definida para "Point::setXY(float, float)"
+/tmp/ccxArWme.o: Na função "Poligono::~Poligono()":
+/home/mateus/Área de Trabalho/Git_Hub/dca1202_Mateus_Eloi_Bastos/proj_1_PA/poligono_class.h:32: referência não definida para "Poligono::limpar()"
 collect2: error: ld returned 1 exit status

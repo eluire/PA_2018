@@ -11,6 +11,11 @@ class Point{
 		float y;
 
 	public:
+		/**
+		@brief construtor por default ou por parametro
+		@param se o obj for criado sem parâmetro, o ponto recebe o valor 0,0.O obj pode ser
+		*inicializado com cordenadas x e y quais quer.
+		*/ 
 		inline Point(float mx =0,float my =0): x(mx), y(my){}// construtor por parâmetro
 		inline Point(const Point& p){setXY(p.x,p.y);}// contrutor por cópia
 
