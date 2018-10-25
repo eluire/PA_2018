@@ -1,0 +1,8 @@
+
+virtual void draw(Screen &tela)=0;
+
+class Line : public figura_geometrica {
+    void draw() {
+      código
+    }
+};
