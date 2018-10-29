@@ -12,16 +12,6 @@ void Screen::start_matrix(){
    matrix.push_back(aux);
   }
 }
-void Screen::show_screen(){
-
-  for (int i=0; i<nl; i++){
-    cout<<"[ ";
-    for (int j=0; j<nc; j++){
-      cout<<matrix[i][j]<<"";
-    }
-    cout<<"]"<<endl;
-  }
-}
 Screen::Screen(){
   nl = 50;
   nc = 50;
@@ -48,7 +38,13 @@ void Screen::clear(){
 void Screen::set_brush(char _brush){
   brush = _brush;
 }
-ostream &operator<<(ostream &os,Screen &t){
-  t.show_screen();
-  return os;
+ostream& operator << (ostream &os,Screen &t){
+ for (int i=0; i<t.nl; i++){
+    os<<"[ ";
+    for (int j=0; j<t.nc; j++){
+      os<<t.matrix[i][j]<<"";
+    }
+    os<<"]"<<'\n';
+  }
+return (os);
 }
