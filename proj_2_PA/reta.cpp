@@ -8,6 +8,7 @@ Reta::Reta(int _xi ,int _yi ,int _xf ,int _yf ,char _brush){
   yi = _yi;
   xf = _xf;
   yf = _yf;
+  brush =_brush;
 }
 int Sinal(int n){
   if(n > 1){
@@ -20,9 +21,19 @@ int Sinal(int n){
     return -1;
   }
 }
+void Reta::redefine(int _xi ,int _yi ,int _xf ,int _yf ){
+  xi =_xi;
+  yi =_yi;
+  xf =_xf;
+  yf =_yf;
+}
+void  Reta::set_brush(char _brush) {
+  brush = _brush;
+}
 void Reta::draw(Screen &t) {
   //breshan method
   //implementação do algoritimo de bresenham para linha
+  t.set_brush(brush);
   bool Troca = 0;
   int x =xi;
   int y =yi;
@@ -41,28 +52,28 @@ void Reta::draw(Screen &t) {
   }
   else{
     Troca = 0;
- }
- int new_e = 2*Delta_y - Delta_x;
- for(int i=1; i<= Delta_x; i++){
-   t.setpixel(x,y);
-   while (new_e >= 0){
-     if(Troca == 1){
-       //Muda para a proxima linha de rasterização
-       x = x + s1;
-     }
-     else{
-       y = y + s2;
-     }
-     new_e = new_e - 2*Delta_x;
-   }
+  }
+  int new_e = 2*Delta_y - Delta_x;
+  for(int i=1; i<= Delta_x; i++){
+    t.setpixel(x,y);
+    while (new_e >= 0){
+      if(Troca == 1){
+        //Muda para a proxima linha de rasterização
+        x = x + s1;
+      }
+      else{
+        y = y + s2;
+      }
+      new_e = new_e - 2*Delta_x;
+    }
 
-   //Permanece nesta linha de rasterização
-   if(Troca == 1){
-     y = y + s2;
-   }
-   else{
-     x = x + s1;
-   }
-   new_e= new_e + 2*Delta_y;
- }
+    //Permanece nesta linha de rasterização
+    if(Troca == 1){
+      y = y + s2;
+    }
+    else{
+      x = x + s1;
+    }
+    new_e= new_e + 2*Delta_y;
+  }
 }

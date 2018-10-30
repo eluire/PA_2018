@@ -7,7 +7,7 @@ void Screen::start_matrix(){
   for (int i=0; i<nl; i++){
     vector<char> aux;
     for (int j=0;j<nc;j++){
-      aux.push_back('.');
+      aux.push_back(' ');
     }
    matrix.push_back(aux);
   }
@@ -15,13 +15,12 @@ void Screen::start_matrix(){
 Screen::Screen(){
   nl = 50;
   nc = 50;
-  brush = '.';
+  brush = ' ';
   start_matrix();
 }
-Screen::Screen(int _nl,int _nc,char _brush){
+Screen::Screen(int _nl,int _nc){
   nl = _nl;
   nc = _nc;
-  brush = _brush;
   start_matrix();
 }
 void Screen::setpixel(int x ,int y){
@@ -31,7 +30,7 @@ void Screen::clear(){
 
   for (int i=0; i<nl; i++){
     for (int j=0; j<nc; j++){
-      matrix[i][j] = '.';
+      matrix[i][j] = ' ';
     }
   }
 }
