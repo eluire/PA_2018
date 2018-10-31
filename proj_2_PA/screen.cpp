@@ -2,29 +2,13 @@
 #include <iostream>
 using namespace std;
 
-void Screen::start_matrix(){
-
-  for (int i=0; i<nl; i++){
-    vector<char> aux;
-    for (int j=0;j<nc;j++){
-      aux.push_back(' ');
-    }
-   matrix.push_back(aux);
-  }
-}
-Screen::Screen(){
-  nl = 50;
-  nc = 50;
-  brush = ' ';
-  start_matrix();
-}
 Screen::Screen(int _nl,int _nc){
   nl = _nl;
   nc = _nc;
-  start_matrix();
+  matrix = vector<vector<char>>(nl, vector<char>(nc, ' '));
 }
 void Screen::setpixel(int x ,int y){
-  matrix[x-1][y-1] = brush;
+  matrix[x][y] = brush;
 }
 void Screen::clear(){
 

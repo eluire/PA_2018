@@ -1,5 +1,4 @@
 dim 20 80
-rectangle 0 0 79 19 0 X
 line 10 0 0 40 X
 line 0 40 10 79 X
 line 10 79 19 40 X

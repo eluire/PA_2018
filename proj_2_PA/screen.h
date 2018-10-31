@@ -16,7 +16,6 @@ private:
 public:
   //construtores
   // seta um novo pixel na tela(com o mesmo brush do obj)
-  Screen();
   Screen(int _nl,int _nc);
   //metodos
   void setpixel(int x ,int y);

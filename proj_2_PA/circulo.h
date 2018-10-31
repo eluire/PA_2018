@@ -7,15 +7,14 @@ class Circulo : public Figura_geometrica{
   private:
     int xc,yc,raio;
     bool fillmode;
-    char brush;
 
   public:
 
-    Circulo(int _xc = 0 , int _yc =0 ,int _raio = 0, bool _fillmode = 0,char brush ='X');
+    Circulo(int _xc, int _yc,int _raio, bool _fillmode,char brush);
     void draw(Screen &t);
 
 
 };
 
 
-#endif
+#endif //CIRCULO_H

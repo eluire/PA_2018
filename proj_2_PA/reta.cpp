@@ -21,15 +21,6 @@ int Sinal(int n){
     return -1;
   }
 }
-void Reta::redefine(int _xi ,int _yi ,int _xf ,int _yf ){
-  xi =_xi;
-  yi =_yi;
-  xf =_xf;
-  yf =_yf;
-}
-void  Reta::set_brush(char _brush) {
-  brush = _brush;
-}
 void Reta::draw(Screen &t) {
   //breshan method
   //implementação do algoritimo de bresenham para linha

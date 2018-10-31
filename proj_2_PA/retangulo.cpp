@@ -11,39 +11,26 @@ Retangulo::Retangulo(int _xi,int _yi,int _altura, int _largura,bool _fillmode,ch
   fillmode =_fillmode;
   brush =_brush;
 }
+void setpixel(Screen &t, int &xi, int &yi, int &altura, int &largura, char &brush){
+  Reta bottom(xi,yi,xi+largura,yi,brush);
+  Reta right(xi+largura,yi,xi+largura,yi+altura,brush);
+  Reta top(xi+largura,yi+altura,xi,yi+altura,brush);
+  Reta left(xi,yi+altura,xi,yi,brush);
+  bottom.draw(t);
+  right.draw(t);
+  top.draw(t);
+  left.draw(t);
+}
 void Retangulo::draw(Screen &t){
-  t.set_brush(brush);
   if(fillmode == 0){
-    Reta bottom(xi,yi,xi+largura,yi);
-    Reta right(xi+largura,yi,xi+largura,yi+altura);
-    Reta top(xi+largura,yi+altura,xi,yi+altura);
-    Reta left(xi,yi+altura,xi,yi);
-    bottom.draw(t);
-    right.draw(t);
-    top.draw(t);
-    left.draw(t);
+    setpixel(t,xi,yi,altura,largura,brush);
   }
   else{
-    Reta bottom(xi,yi,xi+largura,yi);
-    Reta right(xi+largura,yi,xi+largura,yi+altura);
-    Reta top(xi+largura,yi+altura,xi,yi+altura);
-    Reta left(xi,yi+altura,xi,yi);
-    bottom.draw(t);
-    right.draw(t);
-    top.draw(t);
-    left.draw(t);
-
     while (largura != 0 && altura !=0) {
+      setpixel(t,xi,yi,altura,largura,brush);
       largura = largura -1;
       altura = altura -1;
-      bottom.redefine(xi,yi,xi+largura,yi);
-      right.redefine(xi+largura,yi,xi+largura,yi+altura);
-      top.redefine(xi+largura,yi+altura,xi,yi+altura);
-      left.redefine(xi,yi+altura,xi,yi);
-      bottom.draw(t);
-      right.draw(t);
-      top.draw(t);
-      left.draw(t);
+
     }
   }
 }

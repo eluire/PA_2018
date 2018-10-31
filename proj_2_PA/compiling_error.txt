@@ -1,0 +1,18 @@
+/tmp/cci4O7AF.o: Na função "main":
+main.cpp:(.text+0x30): referência não definida para "Screen::Screen(int, int)"
+main.cpp:(.text+0x5a): referência não definida para "Reta::Reta(int, int, int, int, char)"
+main.cpp:(.text+0x84): referência não definida para "Circulo::Circulo(int, int, int, bool, char)"
+main.cpp:(.text+0xb4): referência não definida para "Retangulo::Retangulo(int, int, int, int, bool, char)"
+main.cpp:(.text+0xd1): referência não definida para "Reta::draw(Screen&)"
+main.cpp:(.text+0xea): referência não definida para "Circulo::draw(Screen&)"
+main.cpp:(.text+0x103): referência não definida para "Retangulo::draw(Screen&)"
+main.cpp:(.text+0x119): referência não definida para "operator<<(std::ostream&, Screen&)"
+main.cpp:(.text+0x14a): referência não definida para "Screen::Screen()"
+main.cpp:(.text+0x2e9): referência não definida para "Screen::resize(int, int)"
+main.cpp:(.text+0x2ff): referência não definida para "operator<<(std::ostream&, Screen&)"
+main.cpp:(.text+0x52d): referência não definida para "Reta::Reta(int, int, int, int, char)"
+main.cpp:(.text+0x55d): referência não definida para "Screen::resize(int, int)"
+main.cpp:(.text+0x573): referência não definida para "operator<<(std::ostream&, Screen&)"
+main.cpp:(.text+0x5c0): referência não definida para "Reta::Reta(int, int, int, int, char)"
+main.cpp:(.text+0x6b3): referência não definida para "operator<<(std::ostream&, Screen&)"
+collect2: error: ld returned 1 exit status
