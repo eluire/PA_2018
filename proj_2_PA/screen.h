@@ -9,13 +9,19 @@ class Screen {
 private:
   int nl,nc;
   char brush;
-  //criando uma matriz de vectors
+  /**
+   * @brief matrix cria uma matriz de vectors
+   */
   vector<vector<char>> matrix;
   void start_matrix();
 
 public:
-  //construtores
-  // seta um novo pixel na tela(com o mesmo brush do obj)
+
+   /**
+   * @brief Screen construtor seta um novo pixel na tela(com o mesmo brush do obj)
+   * @param _nl
+   * @param _nc
+   */
   Screen(int _nl,int _nc);
   //metodos
   void setpixel(int x ,int y);
