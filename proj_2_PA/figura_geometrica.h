@@ -19,9 +19,6 @@ class Figura_geometrica{
      * @param tela
      */
     virtual void draw(Screen &tela)=0;
-<<<<<<< HEAD
-
-=======
     /**
      * @brief set_brush
      * @param _brush
@@ -32,6 +29,6 @@ class Figura_geometrica{
      * @return
      */
     inline char get_brush(){return brush;}
->>>>>>> 715cc1a73ab55fc296311505ab544a4c8aca5446
+
 };
 #endif
