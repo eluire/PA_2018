@@ -44,6 +44,7 @@ void MainWindow::tcpConnect(bool cd){
         qDebug()<<b;
 
         socket->connectToHost(a,b);
+
         if(socket->waitForConnected(3000)){
             qDebug() << "Connected";
             ui->status_label->setText("Connect");

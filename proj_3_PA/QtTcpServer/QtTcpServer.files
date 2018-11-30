@@ -1,0 +1,17 @@
+.qmake.stash
+QtServerMultithread
+QtServerMultithread.pro
+datastorage.cpp
+datastorage.h
+main.cpp
+mainwindow.cpp
+mainwindow.h
+mainwindow.ui
+moc_mainwindow.cpp
+moc_myserver.cpp
+moc_mythread.cpp
+myserver.cpp
+myserver.h
+mythread.cpp
+mythread.h
+ui_mainwindow.h

@@ -1,0 +1,5 @@
+QtTcpClientConsumer.pro
+main.cpp
+mainwindow.cpp
+mainwindow.h
+mainwindow.ui

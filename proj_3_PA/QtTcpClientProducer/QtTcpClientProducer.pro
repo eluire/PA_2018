@@ -1,21 +1,19 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2016-05-08T05:33:24
-#
-#-------------------------------------------------
+# Created by and for Qt Creator This file was created for editing the project sources only.
+# You may attempt to use it for building too, by modifying this file here.
 
-QT       += core gui
-QT       += network
+#TARGET = QtTcpClientProducer
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+HEADERS = \
+   $$PWD/mainwindow.h
 
-TARGET = QtTcpClient
-TEMPLATE = app
+SOURCES = \
+   $$PWD/main.cpp \
+   $$PWD/mainwindow.cpp \
+   $$PWD/mainwindow.ui \
+   $$PWD/QtTcpClientProducer.pro
 
+INCLUDEPATH = \
+    $$PWD/.
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+#DEFINES = 
 
-HEADERS  += mainwindow.h
-
-FORMS    += mainwindow.ui
